@@ -1,0 +1,99 @@
+<!-- contact section -->
+
+<section class="contact d-flex align-items-center justify-content-center text-center text-light" id="contact">
+  <div class="container mt-5">
+    <div class="card shadow-lg p-4">
+      <h2 class="text-center mb-3">Contacto</h2>
+      <p class="text-center text-muted">¿Tienes un proyecto o duda? Contáctame.</p>
+
+      <form id="contactForm">
+        <div class="row mb-3">
+          <div class="col-md-6 form-floating mb-3">
+            <input type="text" class="form-control" id="firstName" placeholder="Nombre">
+            <label for="firstName">Nombre</label>
+          </div>
+          <div class="col-md-6 form-floating mb-3">
+            <input type="text" class="form-control" id="lastName" placeholder="Apellido">
+            <label for="lastName">Apellido</label>
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+          <label for="email">Correo electrónico</label>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Tipo de proyecto</label>
+            <select class="form-select" id="projectType" required>
+              <option value="">Selecciona...</option>
+              <option value="Sitio Web">Sitio Web</option>
+              <option value="App Móvil">App Móvil</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Tipo de cliente</label>
+            <select class="form-select" id="clientType" required>
+              <option value="">Selecciona...</option>
+              <option value="Empresa">Empresa</option>
+              <option value="Persona Natural">Persona Natural</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea class="form-control" placeholder="Deja tu mensaje" id="message" style="height: 100px" required></textarea>
+          <label for="message">Mensaje</label>
+        </div>
+
+        <div id="liveAlertPlaceholder"></div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success">Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style scoped>
+.contact {
+  height: 100vh;
+  background: linear-gradient(-45deg, hsl(0, 0%, 0%), #000000, #615c5c, #000000);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Previene el envío tradicional del formulario
+
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const projectType = document.getElementById('projectType').value;
+    const clientType = document.getElementById('clientType').value;
+    const message = document.getElementById('message').value.trim();
+
+    const phoneNumber = '+573023814958';
+
+    // Mensaje que se va a enviar
+    const fullMessage = `Hola coder, soy ${firstName} ${lastName}.\n\n` +
+      `Correo: ${email}\n` +
+      `Tipo de proyecto: ${projectType}\n` +
+      `Tipo de cliente: ${clientType}\n\n` +
+      `Mensaje:\n${message}`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+
+    window.open(whatsappURL, '_blank');
+  });
+</script>

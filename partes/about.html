@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/about.css">
+</head>
+<body>
+    <section id="about" class="about-me d-flex align-items-center">
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="container mt-5">
+            <div class="d-flex gap-4" style="min-height: 600px;">
+                <!-- Video a la izquierda -->
+                <div class="flex-shrink-0 fade-in-left" style="width: 30%;">
+                    <div class="video-container">
+                        <video src="/img/726dd77b94334c31aa9b148519edf069.mp4" 
+                               title="Video personal" 
+                               width="50%" 
+                               height="50%"
+                               autoplay 
+                               loop 
+                               muted>
+                        </video>
+                    </div>
+                    
+                    <!-- Skills Section -->
+                    <div class="tech-skills">
+                        <div class="skill-badge">
+                            <i class="fab fa-html5"></i>
+                            HTML5
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fab fa-css3-alt"></i>
+                            CSS3
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fab fa-js"></i>
+                            JavaScript
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fab fa-vuejs"></i>
+                            Vue.js
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fab fa-react"></i>
+                            React
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fab fa-node-js"></i>
+                            Node.js
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navbar y contenido scrollspy a la derecha -->
+                <div class="flex-grow-1 fade-in-right content-container" style="width: 50%;">
+                    <nav id="navbar-example2" class="navbar navbar-custom px-3 mb-4">
+                        <ul class="nav nav-pills w-100 justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#scrollspyHeading1">
+                                    <i class="fas fa-user me-1"></i>
+                                    Presentación
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#scrollspyHeading2">
+                                    <i class="fas fa-heart me-1"></i>
+                                    Intereses
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#scrollspyHeading3">
+                                    <i class="fas fa-book me-1"></i>
+                                    Lecturas
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#scrollspyHeading4">
+                                    <i class="fas fa-users me-1"></i>
+                                    Equipo
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#scrollspyHeading5">
+                                    <i class="fas fa-star me-1"></i>
+                                    Final
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="scrollspyContainer" 
+                         data-bs-spy="scroll" 
+                         data-bs-target="#navbar-example2"
+                         data-bs-root-margin="0px 0px -40%" 
+                         data-bs-smooth-scroll="true"
+                         class="scrollspy-container scrollspy-example bg-light p-3 rounded shadow" 
+                         tabindex="0">
+
+                        <h4 id="scrollspyHeading1">
+                            <i class="fas fa-code me-2"></i>
+                            Presentación Personal
+                        </h4>
+                        <p>Hola, soy Sebastián Rodelo, un apasionado desarrollador web con un enfoque en la creación de experiencias digitales atractivas y funcionales. Mi trayectoria en el desarrollo web se ha centrado en el dominio de tecnologías fundamentales como HTML, CSS y JavaScript, que son la base de cualquier proyecto web. A lo largo de mi carrera, he tenido la oportunidad de trabajar con diversos frameworks, destacando especialmente Vue.js y React, que me permiten construir interfaces de usuario dinámicas y eficientes.</p>
+
+                        <div class="section-separator"></div>
+
+                        <h4 id="scrollspyHeading2">
+                            <i class="fas fa-dumbbell me-2"></i>
+                            Intereses y Pasiones
+                        </h4>
+                        <p>Fuera del ámbito del desarrollo web, tengo una gran pasión por la calistenia, un deporte que me ha permitido competir y superarme constantemente. La calistenia no solo me ayuda a mantenerme en forma, sino que también me enseña la importancia de la disciplina y la perseverancia. Además, el arte y el dibujo son otras de mis grandes pasiones.</p>
+                        
+                        <div class="interests-grid">
+                            <div class="interest-card">
+                                <i class="fas fa-dumbbell"></i>
+                                <h6>Calistenia</h6>
+                                <small>Competición y disciplina</small>
+                            </div>
+                            <div class="interest-card">
+                                <i class="fas fa-palette"></i>
+                                <h6>Arte y Dibujo</h6>
+                                <small>Expresión creativa</small>
+                            </div>
+                        </div>
+
+                        <div class="section-separator"></div>
+
+                        <h4 id="scrollspyHeading3">
+                            <i class="fas fa-book-open me-2"></i>
+                            Lecturas Favoritas
+                        </h4>
+                        <p>Soy un ávido lector y disfruto sumergirme en libros que me hacen reflexionar y explorar diferentes perspectivas. Cada una de estas obras ha dejado una huella profunda en mi forma de pensar y en mi enfoque hacia la vida.</p>
+                        
+                        <div class="books-showcase">
+                            <span class="book-tag">📚 Popol Vuh</span>
+                            <span class="book-tag">🎭 La Divina Comedia</span>
+                            <span class="book-tag">⭐ El Principito</span>
+                            <span class="book-tag">✍️ El coronel no tiene quien le escriba</span>
+                        </div>
+
+                        <div class="section-separator"></div>
+
+                        <h4 id="scrollspyHeading4">
+                            <i class="fas fa-handshake me-2"></i>
+                            Trabajo en Equipo y Autonomía
+                        </h4>
+                        <p>En el ámbito profesional, me considero una persona versátil que se adapta tanto al trabajo en equipo como a la autonomía. Disfruto colaborar con otros, compartir ideas y aprender de las experiencias de mis compañeros, pero también soy capaz de trabajar de manera independiente, gestionando mis proyectos y cumpliendo con los plazos establecidos.</p>
+
+                        <div class="section-separator"></div>
+
+                        <h4 id="scrollspyHeading5">
+                            <i class="fas fa-rocket me-2"></i>
+                            Conclusión
+                        </h4>
+                        <p>En resumen, soy Sebastián Rodelo, un desarrollador web con una amplia gama de habilidades y pasiones que van más allá de la programación. Mi amor por el arte, la literatura y la calistenia complementa mi carrera profesional, permitiéndome ser una persona integral y creativa. Estoy siempre en busca de nuevos desafíos y oportunidades para crecer, tanto en el ámbito personal como profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/about.js"></script>
+</body>
+</html>
